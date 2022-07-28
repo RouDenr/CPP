@@ -61,7 +61,7 @@ void    PhoneBook::print_collum(std::string col) {
 
 void    PhoneBook::print_contact_info(int n, int max) {
     if (n >= 0 && n < N_CONTACTS && n < max) {
-        std::cout << "---------------------------------------------"
+        std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
                   << std::endl;
         std::cout << "id: " << n << std::endl;
         std::cout << "name: " << this->contacts[n].get_name() << std::endl;
@@ -71,9 +71,9 @@ void    PhoneBook::print_contact_info(int n, int max) {
                   << std::endl;
         std::cout << "phone: " << this->contacts[n].get_phone() << std::endl;
         std::cout << "secret: " << this->contacts[n].get_secret() << std::endl;
-        std::cout << "---------------------------------------------";
+        std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     } else {
-        std::cout << "Ошибка";
+        std::cout << "the index is out of range";
     }
     std::cout << std::endl;
 }
@@ -107,7 +107,7 @@ void    PhoneBook::show_contacts() {
         if (ss >> n)
             break;
         else
-            std::cout << "Введиде id: ";
+            std::cout << "input id: ";
     }
     print_contact_info(n, i);
 }

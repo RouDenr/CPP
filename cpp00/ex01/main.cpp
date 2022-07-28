@@ -10,12 +10,12 @@ int main(int argc, char const *argv[]) {
     if (argc != 1)
         return 1;
     PhoneBook book;
-    while (!std::cin.eof() &&  in != "E") {
-        std::cout << "Введите команду: ";
+    while (!std::cin.eof() &&  in != "EXIT") {
+        std::cout << "Input command: ";
         std::cin >> in;
-        if (in == "A")
+        if (in == "ADD")
             book.add_contact();
-        else if (in == "S")
+        else if (in == "SEARCH")
             book.show_contacts();
     }
     return 0;
