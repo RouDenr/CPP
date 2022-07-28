@@ -1,6 +1,8 @@
-#ifndef PHONEBOOK_HPP_
 // Copyright 2022 decordel
-# define PHONEBOOK_HPP_
+
+#pragma once
+#ifndef __PHONEBOOK_HPP__
+# define __PHONEBOOK_HPP__
 # ifndef N_CONTACTS
 #  define N_CONTACTS 8
 # endif
@@ -27,4 +29,4 @@ class PhoneBook {
     ~PhoneBook();
 };
 
-#endif  // PHONEBOOK_HPP_
+#endif  // __PHONEBOOK_HPP__

@@ -1,4 +1,6 @@
 // Copyright 2022 decordel
+
+#pragma once
 #ifndef CONTACT_HPP_
 # define CONTACT_HPP_
 # include <iostream>
