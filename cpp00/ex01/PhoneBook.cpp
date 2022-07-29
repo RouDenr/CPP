@@ -79,8 +79,13 @@ void    PhoneBook::print_contact_info(int n, int max) {
 }
 
 void    PhoneBook::print_contact_line(int n) {
+    std::stringstream   ss;
+    std::string         tmp;
+
+    ss << n;
+    ss >> tmp;
     std::cout << "|";
-    print_collum(std::to_string(n));
+    print_collum(tmp);
     print_collum(this->contacts[n].get_name());
     print_collum(this->contacts[n].get_lastname());
     print_collum(this->contacts[n].get_nickname());

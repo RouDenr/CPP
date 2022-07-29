@@ -2,14 +2,14 @@
 
 #include "Contact.hpp"
 
-    std::string   name = "";
-    std::string   lastname = "";
-    std::string   nickname = "";
-    std::string   phone = "";
-    std::string   secret = "";
-
 Contact::Contact() {
+    this->name = "";
+    this->lastname = "";
+    this->nickname = "";
+    this->phone = "";
+    this->secret = "";
 }
+
 Contact::Contact(std::string name, std::string lastname,
             std::string phone, std::string secret) {
     this->name = name;
