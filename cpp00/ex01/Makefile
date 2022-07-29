@@ -37,7 +37,7 @@ norm	:
 #!--DEBUG
 
 clean	:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${DEP}
 
 fclean	: clean
 	${RM} ${NAME}
