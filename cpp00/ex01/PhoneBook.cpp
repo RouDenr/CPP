@@ -34,11 +34,16 @@ void    PhoneBook::add_contact() {
         sort_contacts();
         i = N_CONTACTS - 1;
     }
-    this->contacts[i].set_name(read_collum("name"));
-    this->contacts[i].set_lastname(read_collum("lastname"));
-    this->contacts[i].set_nickname(read_collum("nickname"));
-    this->contacts[i].set_phone(read_collum("phone"));
-    this->contacts[i].set_secret(read_collum("secret"));
+    if (!std::cin.eof())
+        this->contacts[i].set_name(read_collum("name"));
+    if (!std::cin.eof())
+        this->contacts[i].set_lastname(read_collum("lastname"));
+    if (!std::cin.eof())
+        this->contacts[i].set_nickname(read_collum("nickname"));
+    if (!std::cin.eof())
+        this->contacts[i].set_phone(read_collum("phone"));
+    if (!std::cin.eof())
+        this->contacts[i].set_secret(read_collum("secret"));
 }
 
 void    PhoneBook::print_collum(std::string col) {
@@ -72,7 +77,7 @@ void    PhoneBook::print_contact_info(int n, int max) {
         std::cout << "phone: " << this->contacts[n].get_phone() << std::endl;
         std::cout << "secret: " << this->contacts[n].get_secret() << std::endl;
         std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    } else {
+    } else if (!std::cin.eof()) {
         std::cout << "the index is out of range";
     }
     std::cout << std::endl;
