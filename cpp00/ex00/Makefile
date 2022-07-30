@@ -1,4 +1,4 @@
-CC		= c++
+CC		= g++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 EXT		= .out
@@ -12,6 +12,9 @@ all		: ${NAME}
 
 ${NAME}	:	${OBJS}
 	${CC} ${FLAGS} $^ -o $@
+
+%.o		:	%.cpp
+	${CC} ${FLAGS} -c $< -o $@
 
 #!--DEBUG
 

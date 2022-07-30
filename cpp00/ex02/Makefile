@@ -11,14 +11,14 @@ SRCS	= 	Account.cpp	\
 OBJS	= ${SRCS:%.cpp=%.o}
 DEP		= ${OBJS:%.o=%.d}
 
-%.o		:	%.cpp
-	${CC} ${FLAGS} -MMD -c $< -o $@
 
 all		: ${NAME}
 
-
 ${NAME}	:	${OBJS}
 	${CC} ${FLAGS} $^ -o $@
+
+%.o		:	%.cpp
+	${CC} ${FLAGS} -MMD -c $< -o $@
 
 -include ${DEP}
 
