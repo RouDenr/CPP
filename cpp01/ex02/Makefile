@@ -4,7 +4,7 @@ FLAGS	= -g -Wall -Wextra -Werror -std=c++98
 EXT		= .out
 RM		= rm -rf
 
-NAME	= brainzzz${EXT}
+NAME	= ptr_vs_ref${EXT}
 SRCS	= 	main.cpp
 
 OBJS	= ${SRCS:%.cpp=%.o}
