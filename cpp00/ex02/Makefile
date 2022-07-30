@@ -1,10 +1,10 @@
 CC		= c++
-FLAGS	= -g -Wall -Wextra -Werror -std=c++98
+FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 EXT		= .out
 RM		= rm -rf
 
-NAME	= phonebook${EXT}
+NAME	= accounts_log${EXT}
 SRCS	= 	Account.cpp	\
 			test.cpp
 
