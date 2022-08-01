@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
+
+# tmp files
+*.replace
+*test*
+
 .vscode
+.idea
+
 # Compiled Object files
 *.slo
 *.lo
