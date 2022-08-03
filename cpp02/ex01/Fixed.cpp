@@ -71,5 +71,4 @@ float Fixed::toFloat() const {
 */
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
-
 }
