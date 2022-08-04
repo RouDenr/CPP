@@ -1,7 +1,5 @@
 // Copyright by decordel $name 2022
 
-// Created by Dennet Cordelia on 03.08.2022.
-
 #include <iostream>
 #include "Point.h"
 
