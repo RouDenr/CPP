@@ -7,6 +7,7 @@ RM		= rm -rf
 NAME	= clapTrap${EXT}
 SRCS	=	ClapTrap.cpp	\
 			ScavTrap.cpp	\
+			FragTrap.cpp	\
 			main.cpp
 
 OBJS	= ${SRCS:%.cpp=%.o}

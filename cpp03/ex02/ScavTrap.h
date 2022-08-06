@@ -6,7 +6,7 @@
 
 
 class ScavTrap: public ClapTrap {
- public:
+public:
     ScavTrap(void);
     ScavTrap(std::string name);
     ScavTrap(const ScavTrap& orig);
@@ -17,5 +17,4 @@ class ScavTrap: public ClapTrap {
     void guardGate(void);
 };
 
-
-#endif //__SCAVTRAP_H__
+#endif //  __SCAVTRAP_H__

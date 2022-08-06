@@ -1,8 +1,8 @@
 // Copyright by decordel 2022
 
 #pragma once
-#ifndef __CLAPTRAP__
-# define __CLAPTRAP__
+#ifndef __CLAPTRAP_H__
+# define __CLAPTRAP_H__
 # include <string>
 
 class ClapTrap {
@@ -31,4 +31,4 @@ class ClapTrap {
 };
 
 
-#endif //  __CLAPTRAP__
+#endif //  __CLAPTRAP_H__

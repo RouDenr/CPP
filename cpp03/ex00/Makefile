@@ -7,8 +7,6 @@ RM		= rm -rf
 NAME	= clapTrap${EXT}
 SRCS	=	ClapTrap.cpp	\
 			main.cpp
-#			Point.cpp	\
-#			bsp.cpp	\
 
 OBJS	= ${SRCS:%.cpp=%.o}
 DEP		= ${OBJS:%.o=%.d}
