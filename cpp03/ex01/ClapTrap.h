@@ -15,7 +15,7 @@ class ClapTrap {
 
     ClapTrap& operator=(const ClapTrap&);
 
-    std::string     getName(void);
+    std::string     getName(void) const;
     std::string     getType(void);
     unsigned int    getAttackDamage(void);
 

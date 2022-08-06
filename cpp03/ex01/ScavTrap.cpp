@@ -16,6 +16,13 @@ ScavTrap::ScavTrap(const ScavTrap &orig) : ClapTrap(orig) {
               << std::endl;
 }
 
+ScavTrap &ScavTrap::operator=(const ScavTrap &orig) {
+    (ClapTrap) *this = (ClapTrap) orig;
+    std::cout << "ScavTrap " << this->getName() << " copy the body from "
+              << orig.getName() << std::endl;
+    return *this;
+}
+
 void ScavTrap::guardGate() {
     std::cout << "ScavTrap " << this->getName()
               << " is now in Gate keeper mode" << std::endl;

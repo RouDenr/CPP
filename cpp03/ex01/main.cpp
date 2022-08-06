@@ -7,6 +7,7 @@
 int main(void) {
     ClapTrap wolterTrap("Wolter");
     ScavTrap tedTrap("Ted");
+    ScavTrap newClap(tedTrap);
 
     wolterTrap.attack(tedTrap.getName());
     tedTrap.takeDamage(wolterTrap.getAttackDamage());

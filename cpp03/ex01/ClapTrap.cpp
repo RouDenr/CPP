@@ -52,7 +52,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap& orig) {
     return *this;
 }
 
-std::string ClapTrap::getName() {
+std::string ClapTrap::getName() const {
     return this->_name;
 }
 
