@@ -6,7 +6,6 @@ RM		= rm -rf
 
 NAME	= animals${EXT}
 SRCS	=	Animal.cpp	\
-			WrongAnimal.cpp	\
 			Dog.cpp		\
 			Cat.cpp		\
 			WrongCat.cpp		\

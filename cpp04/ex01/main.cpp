@@ -3,7 +3,6 @@
 #include <ctime>
 #include <cstdlib>
 #include "Animal.h"
-#include "WrongAnimal.h"
 #include "Cat.h"
 #include "Dog.h"
 #include <iostream>
