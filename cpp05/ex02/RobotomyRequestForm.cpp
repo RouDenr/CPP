@@ -6,12 +6,12 @@
 #include <iostream>
 
 RobotomyRequestForm::RobotomyRequestForm() :
-        Form("robotomy request form", 72, 45) {
+        Form("Robotomy request form", 72, 45) {
     this->target = "average_request";
     srand(time(NULL));
 }
 RobotomyRequestForm::RobotomyRequestForm(std::string target) :
-        Form("robotomy request form", 72, 45) {
+        Form("Robotomy request form", 72, 45) {
     this->target = target;
     srand(time(NULL));
 }

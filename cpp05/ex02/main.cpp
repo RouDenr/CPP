@@ -13,11 +13,13 @@ int main() {
     RobotomyRequestForm requestForm;
     PresidentialPardonForm pardonForm;
 
+    Sten.executeForm(def);
     Sten.signForm(def);
+    average.executeForm(def);
     Sten.signForm(requestForm);
     Sten.signForm(pardonForm);
-//    average.executeForm(def);
-//    Sten.executeForm(def);
+    average.executeForm(def);
+    Sten.executeForm(def);
     Sten.executeForm(requestForm);
     Sten.executeForm(pardonForm);
     return 0;

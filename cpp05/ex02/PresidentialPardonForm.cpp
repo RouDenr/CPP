@@ -4,11 +4,11 @@
 #include <iostream>
 
 PresidentialPardonForm::PresidentialPardonForm() :
-        Form("presidential pardon form", 25, 5) {
+        Form("Presidential pardon form", 25, 5) {
     this->target = "Average Steve";
 }
 PresidentialPardonForm::PresidentialPardonForm(std::string target) :
-        Form("presidential pardon form", 25, 5) {
+        Form("Presidential pardon form", 25, 5) {
     this->target = target;
 }
 PresidentialPardonForm::PresidentialPardonForm(
