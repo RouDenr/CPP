@@ -14,6 +14,7 @@ class Conversion {
     Conversion(const double arg);
     Conversion(Conversion& orig);
 
+    static Conversion* nanConversion(void);
 
     Conversion&     operator=(const Conversion& orig);
 
@@ -22,22 +23,21 @@ class Conversion {
     static double   toDouble(const std::string& arg);
     static char     toChar(const std::string& arg);
 
-    std::string intToString() const;
-    std::string floatToString() const;
-    std::string doubleToString() const;
-    std::string charToString() const;
+    void printInt() const;
+    void printChar() const;
+    void printFloat() const;
+    void printDouble() const;
 
     ~Conversion();
 
  private:
-    void _intConstructor(int arg);
-    void _floatConstructor(float arg);
-    void _doubleConstructor(double arg);
-    void _charConstructor(char arg);
-    void _errConstructor();
+//    void _intConstructor(int arg);
+//    void _floatConstructor(float arg);
+//    void _doubleConstructor(double arg);
+//    void _charConstructor(char arg);
+//    void _errConstructor();
 
-    static int _argCountIter(const std::string& arg, int (*f)(int));
-
+std::string _flagSting(int n) const;
 
     struct           _s_integer {
         int value;
@@ -60,6 +60,7 @@ class Conversion {
         OK,
         IMPOSSIBLE,
         NAN,
+        NOD,
         INF_PLUS,
         INF_MINUS
     };
