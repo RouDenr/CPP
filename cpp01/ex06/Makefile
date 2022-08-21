@@ -1,6 +1,6 @@
 CC		= c++
-# FLAGS	= -Wall -Wextra -Werror -std=c++98
-FLAGS	= -g -Wall -Wextra -std=c++98
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+# FLAGS	= -g -Wall -Wextra -std=c++98
 
 EXT		= .out
 RM		= rm -rf
