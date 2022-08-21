@@ -4,6 +4,7 @@
 # tmp files
 *.replace
 *test*
+/cpp05/ex0*/*_shrubbery
 
 .vscode
 .idea
