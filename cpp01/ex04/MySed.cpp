@@ -8,13 +8,13 @@
 void MySed::createReplaceFile(std::string file, std::string replace_line,
                               std::string new_line) {
 
-    std::ifstream   in_file(file);
+    std::ifstream   in_file(file.c_str(), std::ifstream::in);
     if (!(in_file.good())) {
         std::cout << "file not exist\n";
         return;
     }
     std::cout << in_file;
-    std::ofstream   out_file(file + ".replace");
+    std::ofstream   out_file((file + ".replace").c_str(), std::ofstream::out);
     std::string     str_buf;
 
     while (!in_file.eof()) {
