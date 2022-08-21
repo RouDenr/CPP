@@ -3,19 +3,18 @@
 #include "Conversion.h"
 #include <cstdlib>
 #include <iostream>
-#include <climits>
 #include <stdexcept>
 #include <limits>
 
 Conversion::Conversion() {
     this->_int.value = 0;
-    this->_int.flag = IMPOSSIBLE;
+    this->_int.flag = INF_PLUS;
     this->_char.value = 0;
-    this->_char.flag = IMPOSSIBLE;
+    this->_char.flag = INF_PLUS;
     this->_float.value = 0.f;
-    this->_float.flag = NAN;
+    this->_float.flag = INF_PLUS;
     this->_double.value = 0.;
-    this->_double.flag = NAN;
+    this->_double.flag = INF_PLUS;
 }
 Conversion::Conversion(Conversion &orig) {
     *this = orig;
@@ -161,10 +160,10 @@ void Conversion::printFloat() const {
     if (this->_float.flag != OK)
         std::cout << _flagSting(this->_float.flag);
     else if (this->_float.value - (int)this->_float.value == 0)
-        std::cout << (this->_float.value) << ".0f";
+        std::cout << (this->_float.value) << ".0";
     else
         std::cout << (this->_float.value) << "f";
-    std::cout << std::endl;
+    std::cout << "f" << std::endl;
 }
 void Conversion::printDouble() const {
 
@@ -187,7 +186,7 @@ std::string Conversion::_flagSting(int n) const{
         case NOD:
             return "Non displayable";
         case INF_PLUS:
-            return "inf+";
+            return "inf";
         case INF_MINUS:
             return "inf-";
     }

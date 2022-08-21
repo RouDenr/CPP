@@ -1,7 +1,6 @@
 // Copyright by decordel 2022
 
 #include "Base.h"
-#include <ctime>
 #include <cstdlib>
 #include <iostream>
 
@@ -42,8 +41,7 @@ void identify(Base& p) {
                 (void) dynamic_cast<C&>(p);
                 std::cout << "It's C class" << std::endl;
 
-            } catch (...) {
-            }
+            } catch (...) { }
         }
 
     }
