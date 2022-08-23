@@ -25,7 +25,7 @@ class Brain {
     std::string     getRoundIdea();
 
  private:
-    std::string _ideas[__BRAIN_SIZE__];
+    std::string * _ideas;
 };
 
 
