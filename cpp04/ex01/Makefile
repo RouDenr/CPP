@@ -8,7 +8,6 @@ NAME	= animals${EXT}
 SRCS	=	Animal.cpp	\
 			Dog.cpp		\
 			Cat.cpp		\
-			WrongCat.cpp		\
 			Brain.cpp		\
 			main.cpp
 

@@ -11,12 +11,14 @@ int main(void) {
     srand(time(NULL));
     Animal* j = new Dog();
     Animal* i = new Cat();
+    Animal* test = new Dog();
 
     const int   size_zoo = 20;
     Animal*     zoo[size_zoo];
 
     std::cout << std::endl << j->getIdea() << std::endl;
-    std::cout << i->getIdea() << std::endl << std::endl;
+    std::cout << i->getIdea() << std::endl;
+    std::cout << test->getIdea() << std::endl << std::endl;
 
     for (int k = 0; k < size_zoo; k++) {
         std::cout << std::endl;
@@ -32,7 +34,11 @@ int main(void) {
     for (int k = 0; k < size_zoo; k++) {
         delete zoo[k];
     }
+
+    *test = *j;
     delete j;
+    std::cout << "TEST - " << test->getIdea() << std::endl;
     delete i;
+    delete test;
     return 0;
 }
