@@ -1,18 +1,20 @@
 CC		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
+FLAGS	= -g -Wall -Wextra -Werror -std=c++98
 
 EXT		= .out
 RM		= rm -rf
 
-NAME	= 	template${EXT}
+NAME		= 	template
+NAME_EXT	= 	${NAME}${EXT}
+
 SRCS	=	main.cpp
 
 OBJS	= ${SRCS:%.cpp=%.o}
 DEP		= ${OBJS:%.o=%.d}
 
-all		: ${NAME}
+all		: ${NAME_EXT}
 
-${NAME}	:	${OBJS}
+${NAME_EXT}	:	${OBJS}
 	${CC} ${FLAGS} $^ -o $@
 
 %.o		:	%.cpp
@@ -24,14 +26,14 @@ ${NAME}	:	${OBJS}
 
 ARGS	= test 5 7
 
-do		:	${NAME}
+do		:	${NAME_EXT}
 	@echo
 	@./$^ ${ARGS}
 
-debug	:	${NAME}
-	@lldb -- ./$^  ${ARGS}
+debug	:	${NAME_EXT}
+	@lldb -- ./$^$ ${ARGS}
 
-leaks	:	${NAME}
+leaks	:	${NAME_EXT}
 	@leaks --atExit -- ./$^  ${ARGS}
 
 norm	:
@@ -43,7 +45,7 @@ clean	:
 	${RM} ${OBJS} ${DEP}
 
 fclean	: clean
-	${RM} ${NAME}
+	${RM} ${NAME_EXT}
 
 re		: fclean all
 

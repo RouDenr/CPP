@@ -12,24 +12,30 @@ Array<T>::Array() {
 
 template <typename T>
 Array<T>::Array(const unsigned int &n) {
-    _val = new T(n);
+    _val = new T[n]();
     _size = n;
 }
 
 template <typename T>
 Array<T>::Array(const Array<T> &orig) {
-    *this = orig;
-}
-
-template <typename T>
-Array<T> &Array<T>::operator=(const Array<T> &orig) {
-    delete [] this->_val;
-
-    this->_val = new T(orig._size);
+    this->_val = new T[orig._size]();
     for (unsigned i = 0; i < orig._size; i++) {
         this->_val[i] = orig._val[i];
     }
     this->_size = orig._size;
+}
+
+template <typename T>
+Array<T> &Array<T>::operator=(const Array<T> &orig) {
+    if (this != &orig) {
+        delete [] this->_val;
+
+        this->_val = new T[orig._size]();
+        for (unsigned i = 0; i < orig._size; i++) {
+            this->_val[i] = orig._val[i];
+        }
+        this->_size = orig._size;
+    }
     return *this;
 }
 
@@ -39,7 +45,7 @@ unsigned int Array<T>::size() const {
 }
 
 template <typename T>
-T&       Array<T>::operator[](const unsigned int i) {
+T&      Array<T>::operator[](const unsigned int i) {
     if (i >= size())
         throw ArrayIndexError();
     return this->_val[i];
