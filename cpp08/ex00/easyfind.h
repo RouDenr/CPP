@@ -17,8 +17,7 @@ template <typename T>
 typename T::iterator easyfind(T &arr, int n) {
     if (arr.size() != 0 && *arr.begin() == n)
         return arr.begin();
-    if (arr.begin() == arr.end())
-        throw NotFindError();
+
     typename T::iterator find = std::find(arr.begin(),
                                           arr.end(), n);
     if (*find != n)

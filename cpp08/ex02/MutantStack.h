@@ -3,6 +3,7 @@
 #ifndef __MUTANTSTACK_H__
 # define __MUTANTSTACK_H__
 # include <stack>
+# include <deque>
 
 template <typename T, typename C = std::deque<T> >
 class MutantStack : public std::stack<T, C> {
@@ -12,7 +13,6 @@ class MutantStack : public std::stack<T, C> {
 
     iterator begin() {
         return this->c.begin();
-
     };
 
     iterator end() {

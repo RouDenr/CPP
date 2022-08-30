@@ -9,7 +9,7 @@ int main() {
     Span *test = new Span();
     Span *test3 = new Span(6);
 
-    test->showAll();
+//    test->showAll();
 
     orig->addNumber(3);
     orig->addNumber(6);
@@ -28,15 +28,18 @@ int main() {
     Span *test4 = new Span(6);
     test4->addNumber(v.begin(), v.end());
     test4->showAll();
+    Span *invalid_test = new Span();
 
     *test = *orig;
     test->showAll();
     try {
         std::cout << "SP L_S - " << orig->longestSpan() << std::endl;
+        std::cout << "SP INVALID - " << invalid_test->longestSpan() << std::endl;
     } catch (std::exception& e) {
         std::cout << e.what() << std::endl;
     }
     delete orig;
+    delete invalid_test;
     try {
         std::cout << "TEST L_S - " << test->longestSpan() << std::endl;
         std::cout << "TEST S_S - " << test->shortestSpan() << std::endl;
